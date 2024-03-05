@@ -9,7 +9,11 @@ Console.WriteLine("Hello, World!");
 var settings = new CefSettings() {
     CachePath = Path.Combine(Path.GetTempPath(), "cefsharpcache")
 };
+//This fails
 await Cef.InitializeAsync(settings);
+//This works
+//Cef.Initialize(settings);
+
 
 string url = "www.bing.com";
 BrowserSettings browserSettings = new BrowserSettings {
